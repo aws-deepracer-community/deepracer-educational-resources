@@ -1,8 +1,6 @@
 # Deepracer winner counter
 
-![EVO car](https://d1.awsstatic.com/deepracer/Evo%20and%20Sensor%20Launch%202020/evo-spin.fdf40252632704f3b07b0a2556b3d174732ab07e.gif)
-
-
+<img src="https://d1.awsstatic.com/deepracer/Evo%20and%20Sensor%20Launch%202020/evo-spin.fdf40252632704f3b07b0a2556b3d174732ab07e.gif" alt="EVO car" width="250">
 
 ## AWS DeepRacer
 AWS DeepRacer is a 1/18th scale autonomous race car but also much more. It is a complete program that has helped thousands of employees in numerous organizations begin their educational journey into machine learning through fun and rivalry.
