@@ -270,13 +270,16 @@ wildcard_qualifier(wildcard_open)
 #
 # ![Creating a new SageMaker Notebook](./img/4_new_sagemaker_notebook.png)
 #
+# Next, in the Git Repositories section select "Clone a public Git repository to this instance only" and provide the URL of this article's repository: 
+# ![Selecting a public repository](./img/5_clone_git_repository.png)
 #
 # Wait a couple of minutes for Instance to be created.
 #
+# Now you can open the notebook and make changes to it. If you get an error about kernel not being found, select conda_python3
 #
-# Now you can change notebook but do not forget to Stop Notebook instance when you finish to prevent unexpected billing. **YOU WILL GET BILLED IF YOU DO NOT**
+# Do not forget to Stop Notebook instance when you finish to prevent unexpected billing. **YOU WILL GET BILLED IF YOU DO NOT**
 #
-# ![image.png](./img/6_stop_sagemaker_notebook.png)
+# ![Stopping a SageMaker Notebook to prevent costs](./img/6_stop_sagemaker_notebook.png)
 
 # + id="CAHw5M5oGNZB"
 
