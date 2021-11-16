@@ -234,7 +234,7 @@ car_winners()
 # AWS always give a last minute opportunity to qualify. Normally this would be a live race at the re:Invent conference but since everything is taking place virtually, so is this Wildcard race. Top five participants take part in the championships, but we need to sift out those who race but already had their places secured.
 #
 # The race just finished and we wanted to know who qualified. We can either add FINAL.csv in the months_races list or **get raw** information from the Github table. Click "raw" and copy URL: 
-# ![Finding URL of a raw file on GitHub](./img/2_raw_file_finding_on_github.png)
+# <img src="img/2_raw_file_finding_on_github.png" />
 #
 # Now all that's left is to load the file, remove the finalists so far and list top five racers:
 
