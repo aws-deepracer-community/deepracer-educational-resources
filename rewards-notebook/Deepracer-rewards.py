@@ -32,7 +32,7 @@
 # 1.  First Prize: AWS DeepRacer Championship qualification (24 total, 3 per month),
 # 1.  Second Prize: AWS DeepRacer EVO (80 total, 10 per month),
 #
-# But not everything straight forvard. Good racer could not get two cars or go win two slots in the Championships. There is "Prize condition": Each participant may receive a maximum of 1 of each prize type during the 2021 season.
+# But not everything is straightforward. Good racer could not get two cars or go win two slots in the Championships. There is "Prize condition": Each participant may receive a maximum of 1 of each prize type during the 2021 season.
 #
 # Let's try and identify the winners using Python, Pandas and Jupyter Notebook.
 #
@@ -64,7 +64,7 @@ df_leaderboards = pd.read_csv('https://raw.githubusercontent.com/aws-deepracer-c
 df_leaderboards.head()
 
 # + [markdown] id="R5UZ8ZaPUvWM"
-# You need to manually add data to variable **month_races** which is colomn "Name" from df_leaderboards: [leaderboards.csv](https://github.com/aws-deepracer-community/deepracer-race-data/blob/main/raw_data/leaderboards/leaderboards.csv ) 
+# You need to manually add data to variable **month_races** which is column "Name" from df_leaderboards: [leaderboards.csv](https://github.com/aws-deepracer-community/deepracer-race-data/blob/main/raw_data/leaderboards/leaderboards.csv ) 
 
 # + id="g2C-_KtVEg6E"
 months_races = ['March Qualifier', 'April Qualifier', 'May Qualifier', 'June Qualifier', 'July Qualifier', 'August Qualifier', 'September Qualifier', 'October Qualifier']
@@ -97,12 +97,12 @@ for arn_win in month_final_arn:
 
 
 # + [markdown] id="m0N50FYpz_xj"
-# You can mention construction 
+# Let's mention this bit:
 # ```
 # try:
 # except urllib.error.HTTPError as err:
 # ```
-# that was used due to Final october race still upcoming at the time of writing this article. Because of that the file FINAL.csv was not available and we protected ourselves by adding an empty dataframe so that we didn't have to handle a missing entry in a list in code that followed
+# that was used due to Final October race still upcoming at the time of writing this article. Because of that the file FINAL.csv was not available and we protected ourselves by adding an empty dataframe so that we didn't have to handle a missing entry in a list in code that followed
 #
 #
 # Let's have a quick look at what information we can get from the repository:
@@ -126,7 +126,7 @@ list_finale[0][['Alias', 'UserId', 'Rank']].head()
 #
 # `df_month_finale` dataframes above hold results for those races. They are sorted by Rank which makes it easier for us as we don't have to think about reordering the records.
 #
-# To build a list of winners, for each month we need to take the top 3 racers and append them to a list of racers. Luckily we don't neet to worry about duplicate racers either as none of the previous winners take part in the finales anymore.
+# To build a list of winners, for each month we need to take the top 3 racers and append them to a list of racers. Luckily we don't neet to worry about duplicate racers either as none of the previous winners take part in the finales any more.
 #
 # ![DeepRacer.jpeg](https://raw.githubusercontent.com/aws-deepracer-community/deepracer-educational-resources/5eef46a855d185fab5dd8722ab6c01bba96981c2/rewards-notebook/img/1_winners_selection.jpeg)
 #
@@ -165,7 +165,7 @@ def championship_racers():
 championship_racers()
 
 # + [markdown] id="LuvC44048f9T"
-# Let's imagine that the month just finished and the final race have not occure yet but we want to see who will compete in it. Let's see who compete in October final race:
+# Let's imagine that the month just finished and the finale race has not happened yet but we want to see who will compete in it. Let's see who compete in October final race:
 
 # + colab={"base_uri": "https://localhost:8080/", "height": 545} id="ookSbIcP8xUh" outputId="bcbd1f80-c99f-48c2-9987-4d89b83a5a96"
 list_end_of_month[7][['Alias', 'UserId', 'Rank']].head(n=16)
@@ -221,7 +221,7 @@ def car_winners():
 #
 # For each month we take the car winners so far, append the finale results to it, then the month race results, and drop the duplicates leaving only the first occurrence of a UserId value. This means that if someone is already a car winner, their entries will be removed from finale and month race results. Likewise, if they were finale racers, their month race results will be removed.
 #
-# Effectively this means tha we build a list containing all the car winners so far and a list of rank-ordered performers in a given month who have not yet won a car. All we need to do now is to drop everyone except of the top ten for a given month. Since each month the list is growing, we perform `.iloc[:(idx+1)*10]`.
+# Effectively this means that we build a list containing all the car winners so far and a list of rank-ordered performers in a given month who have not yet won a car. All we need to do now is to drop everyone except of the top ten for a given month. Since each month the list is growing, we perform `.iloc[:(idx+1)*10]`.
 #
 # Let's see the results:
 
@@ -249,7 +249,7 @@ def wildcard_qualifier(df_wildcard):
 
 
 # + [markdown] id="HzPAJnYq3NnO"
-# Let's see who quilified through the Wildcard race:
+# Let's see who qualified through the Wildcard race:
 
 # + colab={"base_uri": "https://localhost:8080/", "height": 204} id="ha-r0DJy3IDE" outputId="c5f1fbef-330b-46ab-f864-8ea404112c65"
 wildcard_qualifier(wildcard_open)
@@ -261,22 +261,22 @@ wildcard_qualifier(wildcard_open)
 #
 # ## Source code
 #
-# This article has been prepared as a Jupyter Notebook which we have shared on GitHub. You can download it yourself and play with it a little here: [https://github.com/mokoron/deepracer.git](https://github.com/mokoron/deepracer.git)
+# This article has been prepared as a Jupyter Notebook which we have shared on GitHub. You can download it yourself and play with it a little here: [https://github.com/aws-deepracer-community/deepracer-educational-resources/](https://github.com/aws-deepracer-community/deepracer-educational-resources/)
 
 # + [markdown] id="iFSlASw3jmo7"
 # # SageMaker 
 #
-# I guess you want to play aroud with notebook. You can easily do it by running this into AWS Sagemaker. 
+# I guess you want to play around with notebook. You can easily do it by running this into AWS Sagemaker. 
 #
 # First, login into your ASW account and navigate to Amazon SageMaker:
 #
 # ![How to find SageMaker in AWS Console](https://raw.githubusercontent.com/aws-deepracer-community/deepracer-educational-resources/5eef46a855d185fab5dd8722ab6c01bba96981c2/rewards-notebook/img/3_sagemaker_in_aws_console.png)
 #
-# Navigate to Notebook – Notebook Instancies and Create notebook instance (orange button on a right top corner). Choose a name for Notebook instance other parameters you can leave as default value.
+# Navigate to Notebook – Notebook Instances and Create notebook instance (orange button on a right top corner). Choose a name for Notebook instance other parameters you can leave as default value.
 #
 # ![Creating a new SageMaker Notebook](https://raw.githubusercontent.com/aws-deepracer-community/deepracer-educational-resources/5eef46a855d185fab5dd8722ab6c01bba96981c2/rewards-notebook/img/4_new_sagemaker_notebook.png)
 #
-# Next, in the Git Repositories section select "Clone a public Git repository to this instance only" and provide the URL of this article's repository: 
+# Next, in the Git Repositories section select "Clone a public Git repository to this instance only" and provide the URL of this article's repository: [https://github.com/aws-deepracer-community/deepracer-educational-resources.git](https://github.com/aws-deepracer-community/deepracer-educational-resources.git)
 # ![Selecting a public repository](https://raw.githubusercontent.com/aws-deepracer-community/deepracer-educational-resources/5eef46a855d185fab5dd8722ab6c01bba96981c2/rewards-notebook/img/5_clone_git_repository.png)
 #
 # Wait a couple of minutes for Instance to be created.
