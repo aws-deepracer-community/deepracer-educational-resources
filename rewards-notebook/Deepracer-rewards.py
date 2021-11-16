@@ -102,7 +102,7 @@ for arn_win in month_final_arn:
 # try:
 # except urllib.error.HTTPError as err:
 # ```
-# that was used due to Final october race still upcoming. Because of that the file FINAL.csv is not available and we protect ourselves by adding an empty dataframe so that we don't have to handle a missing entry in a list in code that follows
+# that was used due to Final october race still upcoming at the time of writing this article. Because of that the file FINAL.csv was not available and we protected ourselves by adding an empty dataframe so that we didn't have to handle a missing entry in a list in code that followed
 #
 #
 # Let's have a quick look at what information we can get from the repository:
@@ -229,21 +229,27 @@ def car_winners():
 car_winners()
 
 # + [markdown] id="MJJzVX8O0xPm"
-# The Wildcard race just finished and we wanted to know who qualified. We can either add FINAL.csv in the months_races list or **get raw** information from the Github table. Click "raw" and copy URL: 
+# ## Wildcard race winners
+#
+# AWS always give a last minute opportunity to qualify. Normally this would be a live race at the re:Invent conference but since everything is taking place virtually, so is this Wildcard race. Top five participants take part in the championships, but we need to sift out those who race but already had their places secured.
+#
+# The race just finished and we wanted to know who qualified. We can either add FINAL.csv in the months_races list or **get raw** information from the Github table. Click "raw" and copy URL: 
 # ![Finding URL of a raw file on GitHub](./img/2_raw_file_finding_on_github.png)
+#
+# Now all that's left is to load the file, remove the finalists so far and list top five racers:
 
 # + id="GINwMp3Y0v7r"
 wildcard_open = pd.read_csv("https://raw.githubusercontent.com/aws-deepracer-community/deepracer-race-data/main/raw_data/leaderboards/arn%3Aaws%3Adeepracer%3A%3A%3Aleaderboard/08db3006-f491-48b4-a238-926c6465e5d8/FINAL.csv")
 
 def wildcard_qualifier(df_wildcard):
   winners = championship_racers()
-  wildcard_5 = winners.append(df_wildcard[['Alias', 'UserId', 'Rank']]).drop_duplicates('UserId').reset_index(drop=True).iloc[24:29]
+  wildcard_5 = df_wildcard[['Alias', 'UserId', 'Rank']].append(winners).drop_duplicates('UserId', keep='last').reset_index(drop=True).head(n=5)
   wildcard_5['Month']= wildcard_5['Month'].fillna("wildcard")   
   return wildcard_5
 
 
 # + [markdown] id="HzPAJnYq3NnO"
-# Let's see who quilified in Wildcard race. We need only 5 racers who have not quilified for Re:Invent yet.
+# Let's see who quilified through the Wildcard race:
 
 # + colab={"base_uri": "https://localhost:8080/", "height": 204} id="ha-r0DJy3IDE" outputId="c5f1fbef-330b-46ab-f864-8ea404112c65"
 wildcard_qualifier(wildcard_open)
