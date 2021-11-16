@@ -17,7 +17,7 @@
 # + [markdown] id="XVbNrlXzsdf5"
 # # Deepracer winner counter
 #
-# <img src="./img/0_dr_evo_360.gif" alt="EVO car" width="250">
+# <img src="https://raw.githubusercontent.com/aws-deepracer-community/deepracer-educational-resources/5eef46a855d185fab5dd8722ab6c01bba96981c2/rewards-notebook/img/0_dr_evo_360.gif" alt="EVO car" width="250">
 #
 # ## AWS DeepRacer
 # AWS DeepRacer is a 1/18th scale autonomous race car but also much more. It is a complete program that has helped thousands of employees in numerous organizations begin their educational journey into machine learning through fun and rivalry.
@@ -128,7 +128,7 @@ list_finale[0][['Alias', 'UserId', 'Rank']].head()
 #
 # To build a list of winners, for each month we need to take the top 3 racers and append them to a list of racers. Luckily we don't neet to worry about duplicate racers either as none of the previous winners take part in the finales anymore.
 #
-# ![DeepRacer.jpeg](./img/1_winners_selection.jpeg)
+# ![DeepRacer.jpeg](https://raw.githubusercontent.com/aws-deepracer-community/deepracer-educational-resources/5eef46a855d185fab5dd8722ab6c01bba96981c2/rewards-notebook/img/1_winners_selection.jpeg)
 #
 # This is our method to determine the finalists:
 #
@@ -234,7 +234,7 @@ car_winners()
 # AWS always give a last minute opportunity to qualify. Normally this would be a live race at the re:Invent conference but since everything is taking place virtually, so is this Wildcard race. Top five participants take part in the championships, but we need to sift out those who race but already had their places secured.
 #
 # The race just finished and we wanted to know who qualified. We can either add FINAL.csv in the months_races list or **get raw** information from the Github table. Click "raw" and copy URL: 
-# <img src="img/2_raw_file_finding_on_github.png" />
+# <img src="https://raw.githubusercontent.com/aws-deepracer-community/deepracer-educational-resources/5eef46a855d185fab5dd8722ab6c01bba96981c2/rewards-notebook/img/2_raw_file_finding_on_github.png" />
 #
 # Now all that's left is to load the file, remove the finalists so far and list top five racers:
 
@@ -270,14 +270,14 @@ wildcard_qualifier(wildcard_open)
 #
 # First, login into your ASW account and navigate to Amazon SageMaker:
 #
-# ![How to find SageMaker in AWS Console](./img/3_sagemaker_in_aws_console.png)
+# ![How to find SageMaker in AWS Console](https://raw.githubusercontent.com/aws-deepracer-community/deepracer-educational-resources/5eef46a855d185fab5dd8722ab6c01bba96981c2/rewards-notebook/img/3_sagemaker_in_aws_console.png)
 #
 # Navigate to Notebook – Notebook Instancies and Create notebook instance (orange button on a right top corner). Choose a name for Notebook instance other parameters you can leave as default value.
 #
-# ![Creating a new SageMaker Notebook](./img/4_new_sagemaker_notebook.png)
+# ![Creating a new SageMaker Notebook](https://raw.githubusercontent.com/aws-deepracer-community/deepracer-educational-resources/5eef46a855d185fab5dd8722ab6c01bba96981c2/rewards-notebook/img/4_new_sagemaker_notebook.png)
 #
 # Next, in the Git Repositories section select "Clone a public Git repository to this instance only" and provide the URL of this article's repository: 
-# ![Selecting a public repository](./img/5_clone_git_repository.png)
+# ![Selecting a public repository](https://raw.githubusercontent.com/aws-deepracer-community/deepracer-educational-resources/5eef46a855d185fab5dd8722ab6c01bba96981c2/rewards-notebook/img/5_clone_git_repository.png)
 #
 # Wait a couple of minutes for Instance to be created.
 #
@@ -285,7 +285,7 @@ wildcard_qualifier(wildcard_open)
 #
 # Do not forget to Stop Notebook instance when you finish to prevent unexpected billing. **YOU WILL GET BILLED IF YOU DO NOT**
 #
-# ![Stopping a SageMaker Notebook to prevent costs](./img/6_stop_sagemaker_notebook.png)
+# ![Stopping a SageMaker Notebook to prevent costs](https://raw.githubusercontent.com/aws-deepracer-community/deepracer-educational-resources/5eef46a855d185fab5dd8722ab6c01bba96981c2/rewards-notebook/img/6_stop_sagemaker_notebook.png)
 
 # + id="CAHw5M5oGNZB"
 
