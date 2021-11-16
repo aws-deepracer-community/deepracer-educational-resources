@@ -7,7 +7,7 @@ AWS DeepRacer is a 1/18th scale autonomous race car but also much more. It is a 
 
 Visit [AWS DeepRacer page](http://deepracer.com/) to learn more about how it can help you and your organization begin and progress the journey towards machine learning.
 
-Join the [AWS Machine Learning Community]http://join.deepracing.io/) to talk to people who have used DeepRacer in their learning experience.
+Join the [AWS Machine Learning Community](http://join.deepracing.io/) to talk to people who have used DeepRacer in their learning experience.
 
 ## Resources
 
