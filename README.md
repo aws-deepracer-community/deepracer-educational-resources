@@ -14,6 +14,6 @@ Join the [AWS Machine Learning Community](http://join.deepracing.io/) to talk to
 
 Folder | Description | Tools presented | Additional resources
 --- | --- | --- | ---
-deepracer-rewards | Uses [deepracer-race-data](https://github.com/aws-deepracer-community/deepracer-race-data/) to fetch race results from the AWS DeepRacer League 2021 season and determine the winners of prizes| Jupyter Notebook, SageMaker Notebook, Python, Pandas | .
+deepracer-rewards | Uses [deepracer-race-data](https://github.com/aws-deepracer-community/deepracer-race-data/) to fetch race results from the AWS DeepRacer League 2021 season and determine the winners of prizes| Jupyter Notebook, SageMaker Notebook, Python, Pandas | [![Open In SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/aws-deepracer-community/deepracer-educational-resources/blob/main/rewards-notebook/Deepracer-rewards.ipynb)
 
 
